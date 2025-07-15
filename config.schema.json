@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "deployment": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "pattern": "^[Ll][Oo][Nn][Dd][Oo][Nn]$|^[Pp][Aa][Rr][Ii][Ss]$",
+          "description": "Deployment location (case insensitive)"
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "deployment"
+  ],
+  "additionalProperties": false
+}
