@@ -1,0 +1,17 @@
+name: Validate Config Schema
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v6
+        
+    - name: Validate config.yml against schema
+      run: make
